@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leonardo Alves - GitHub: Leonardo-AD">
+    <meta name="description" content="Um conversor de moedas com informações úteis sobre economia e o mercado de ações">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/currency.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <header class="top-header">
+        <div class="logo" title="Logo do site, cifrão e nome do site: Conversor" alt="Logo do site">
+            <i class="material-icons" id="converter-icon">currency_exchange</i><h1 id="title">Conversor</h1>
+        </div>
+
+        <label for="switch" class="label" tabindex="1" title="Ícone da lua/sol para alternar entre o tema dark e tema light do site" alt="Ícone da lua/sol">
+            <input type="checkbox" id="switch" class="dark-mode-input" hidden><i onclick="changeIcon()" class="material-icons" id="moon-icon">nightlight_round</i>
+        </label>
+            
+        <nav id="nav">            
+            <ul id="menu">
+                <li>
+                    <a 
+                        href="https://br.investing.com/" target="_blank" 
+                        title="Site da investing.com, acesse para mais notícias do mercado financeiro">
+                        Notícias
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+    </header>
+    
+    <hr>
+
+    <main>
+        <section class="painel-section">
+            <div id="painel">
+
+                <h1 id="painel-text">Cotação</h1>
+                
+                <div class="currency-info">    
+                    <form action="">
+                        <select name="currency-field" id="currency-option" onchange="getCurrency()">
+                            <optgroup label="Moedas">
+                                <option value="R$ 5.06" selected>Dólar Americano</option>
+                                <option value="R$ 3.78">Dólar Canadense</option>
+                                <option value="R$ 0.077" >Rublo Russo</option>
+                                <option value="R$ 5.27">Euro</option>
+                                <option value="R$ 6.16">Libra Esterlina</option>
+                                <option value="R$ 5.01">Franco Suíço</option>
+                            </optgroup>
+                            
+                            <optgroup label="Criptomoedas">
+                                <option value="R$ 191.153,50">Bitcoin</option>
+                                <option value="R$ 14.160,99">Ether</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" id="currency-value" value="" readonly>
+                    </form>
+                </div>
+
+                <div class="calculate-currency">
+                    <h3 id="instructions">Selecione: valor, moedas e converta</h3>
+
+                    <form action="">
+                        <input type="number" id="first-value" placeholder="exemplo: 100">
+                        <select name="currency-field" id="first-currency-option">
+                            <optgroup label="Moedas">
+                                <option value="5.06">Dólar Americano</option>
+                                <option value="3.78">Dólar Canadense</option>
+                                <option value="1">Real Brasileiro</option>
+                                <option value="0.077" >Rublo Russo</option>
+                                <option value="5.27">Euro</option>
+                                <option value="6.16">Libra Esterlina</option>
+                                <option value="5.01">Franco Suíço</option>
+                            </optgroup>
+                            
+                            <optgroup label="Criptomoedas">
+                                <option value="191153.50">Bitcoin</option>
+                                <option value="14160.99">Ether</option>
+                            </optgroup>
+                        </select>                        
+                    </form>
+                    
+                    <form action="">
+                        <input type="number" id="second-value" readonly>
+                        <select name="currency-field" id="second-currency-option">
+                            <optgroup label="Moedas">
+                                <option value="5.06">Dólar Americano</option>
+                                <option value="3.78">Dólar Canadense</option>
+                                <option value="1" selected>Real Brasileiro</option>
+                                <option value="0.077" >Rublo Russo</option>
+                                <option value="5.27">Euro</option>
+                                <option value="6.16">Libra Esterlina</option>
+                                <option value="5.01">Franco Suíço</option>
+                            </optgroup>
+                            
+                            <optgroup label="Criptomoedas">
+                                <option value="191153.50">Bitcoin</option>
+                                <option value="14160.99">Ether</option>
+                            </optgroup>
+                        </select>
+                    </form>
+                    <div class="options-buttons">
+                        <input type="button" id="clear-button" value="Excluir" onclick="clearInputs()" title="Botão para apagar os valores inseridos e os resultados">
+                        <input type="button" id="convert-button" value="Converter" onclick="convert()" title="Botão para converter os valores das moedas selecionadas">
+                    </div>
+
+                    <div class="result">
+                        <p id="print-result-text"></p>
+                        <h3 id="print-result-value"></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/Leonardo-AD" target="_blank" title="Ícone do Github, clique para acessar meu perfil no Github"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/leonardo-alves-877368165/" target="_blank" title="Ícone do Linkedin, clique para acessar meu perfil no Linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/leonardo_aldias/" target="_blank"><i class="fa fa-instagram" title="Ícone do Instagram, clique para acessar meu perfil no Instagram"></i></a>
+        </div>
+
+        <article id="article-footer">
+            <p id="text-footer">&copy All Rights Reserved - Leonardo-AD</p>
+        </article>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+/* Variables CSS */
+:root{
+    --body-icon-color: #fdfdfd;
+    --body-font-color: #fdfdfd;
+    --body-section-color: #fdfdfd;
+    --body-painel-text-color: #303031;
+    --body-background-color: rgb(59, 84, 84);
+    --button-background-hover: rgb(80, 122, 122);
+    --caution-button-color: rgb(160, 30, 30);
+    --caution-hover-button-color: rgb(215, 46, 46);
+    --link-hover-color: rgb(149, 171, 171);
+}
+
+/*Dark Mode Variables*/
+.dark-mode:root{
+    --body-font-color: #fdfdfd;
+    --link-hover-color: rgb(149, 171, 171);
+    --button-background-hover: rgb(80, 122, 122);
+    --body-section-color: #070508;
+    --body-painel-text-color: #fdfdfd;
+}
+
+::-moz-selection{
+    color: var(--body-font-color);
+    background: var(--body-background-color);
+}
+
+::selection{
+    color: var(--body-font-color);
+    background: var(--body-background-color);
+}
+
+/* Font of Google */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Body Settings */
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Lato', sans-serif;
+    background-color: rgb(59, 84, 84);
+}
+
+/* Effect of currency icon when load/reload the page */
+#converter-icon{
+    animation: myMove 3s;
+    cursor: default;
+}
+
+@keyframes myMove{
+    100%{transform: rotate(360deg);}
+}
+
+/* Header Section */
+.top-header{
+    display: flex;
+    margin: 0.2rem;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#title{
+    font-size: 1.9rem;
+    color: var(--body-font-color);
+    text-align: center;
+    font-weight: 500;
+}
+
+hr{
+    opacity: 0.3;
+    background-color: var(--body-icon-color);
+    padding: 0;
+    margin: 0.2rem 0.5rem 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+#converter-icon{
+    color: var(--body-icon-color);
+    font-size: 2.5rem;
+    margin: 0 0 0 0.5rem;
+}
+
+.top-header nav ul{
+    padding-left: 0;
+    list-style: none;
+}
+
+.top-header h1, label, nav{
+    margin: 0 0.5rem;
+}
+
+#nav ul li a{
+    display: inline-block;
+    color: var(--body-font-color);
+    text-decoration: none;
+    font-weight:lighter;
+    margin: 0;
+}
+
+#nav ul li a:hover{
+    color: var(--link-hover-color);
+}
+
+.dark-mode-input{
+    color: var(--body-icon-color);
+}
+
+#moon-icon{
+    color: var(--body-icon-color);
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#moon-icon:hover{
+    color: var(--link-hover-color);
+}
+
+/* Painel/Main Section */
+.painel-section{
+    /*Center the container*/
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+
+    /*Take full size
+    height: 80vh;*/
+    margin: 4rem 0 0 0;
+    width: 100%;
+    opacity: 0.95;     
+}
+
+#painel{
+    height: 60vh;
+    max-width: 95vw;    
+    background-color: var(--body-section-color);
+    border: none;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.9;
+}
+
+#painel-text{
+    color: var(--body-painel-text-color);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+}
+
+/* Painel converter fields */
+.currency-info{
+    color: var(--body-painel-text-color);
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.currency-info form{
+    display: flex;
+    align-items: center;
+}
+
+.currency-info label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.2rem;
+}
+
+.currency-info form select{
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 1px solid var(--body-painel-text-color);
+    color: var(--body-painel-text-color);
+    background-color: var(--body-section-color);
+    margin: 0.2rem;
+}
+
+.currency-info form optgroup{
+    font-size: 0.9rem;
+    border: 1px solid var(--body-painel-text-color);
+    background-color: var(--body-section-color);
+    color: var(--body-painel-text-color);
+}
+
+.currency-info form input{
+    max-width: 10rem;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--body-painel-text-color);
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--body-painel-text-color);
+    background-color: var(--body-section-color);
+    margin: 0.2rem;
+}
+
+.calculate-currency{
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem auto;
+    max-width: 30rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculate-currency h3{
+    color: var(--body-painel-text-color);
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.calculate-currency form{
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    margin: 0 0 0.5rem;
+}
+
+.calculate-currency form input{
+    width: 8rem;
+    height: 1.4rem;
+    font-size: 1rem;
+    color: var(--body-painel-text-color);
+    padding-left: 0.2rem;
+    background-color: var(--body-section-color);
+    border: 1px solid var(--body-painel-text-color);
+    border-radius: 0.3rem;
+}
+
+.calculate-currency #clear-button{
+    margin: 0.5rem 0 auto;
+    width: 4rem;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+    color: var(--body-font-color);
+    background-color: var(--caution-button-color);
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.calculate-currency #convert-button{
+    margin: 0.5rem 0 auto;
+    width: 6rem;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+    color: var(--body-font-color);
+    background-color: var(--body-background-color);
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.calculate-currency form optgroup{
+    font-size: 0.9rem;
+    color: var(--body-painel-text-color);
+    background-color: var(--body-section-color);
+    border: 1px solid var(--body-painel-text-color);
+}
+
+.calculate-currency form select{
+    font-size: 0.9rem;
+    background-color: var(--body-section-color);
+    color: var(--body-painel-text-color);
+    border: 1px solid var(--body-painel-text-color);
+    border-radius: 0.3rem;
+}
+
+.calculate-currency #second-value{
+    color: var(--button-background-hover);
+}
+
+#convert-button:active{
+    color: #ffffff;
+    background-color: var(--button-background-hover);
+    box-shadow: 0 0.5rem 0.5rem -0.5rem var(--button-background-hover);
+    transform: translateY(0.10rem);
+}
+
+#convert-button:hover{
+    background-color: var(--button-background-hover);
+    color: #ffffff;
+} 
+
+#clear-button:active{
+    color: #ffffff;
+    background-color: var(--caution-hover-button-color);
+    box-shadow: 0 0.5rem 0.5rem -0.5rem var(--caution-hover-button-color);
+    transform: translateY(0.10rem);
+}
+
+#clear-button:hover{
+    color: #ffffff;
+    background-color: var(--caution-hover-button-color);
+}
+
+/* Div to show the values */
+
+.result{
+    margin: 2rem;
+    max-width: 20rem;
+}
+
+.result p{
+    color: var(--body-painel-text-color);
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+
+.result h3{
+    color: var(--body-painel-text-color);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+    font-weight: bolder;
+}
+
+/*Footer Section*/
+footer{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem 0 1rem;
+    margin-top: 4rem;
+    background-color: var(--body-section-color);
+    opacity: 0.9;
+}
+
+#text-footer{
+    color: var(--body-painel-text-color);
+    text-align: center;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.social-icons i{
+    color: var(--body-painel-text-color);
+    font-size: 1.4rem;
+    margin: 0.5rem 0.5rem 0;
+}
+
+.social-icons i:hover, .social-icons i:focus{
+    color: var(--link-hover-color);
+}
