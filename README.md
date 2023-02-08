@@ -14,31 +14,31 @@
 
 <p>When trying to convert without a value, an alert from the SweetAlert2 API appears</p>
 
-<img src="./images/" widht="500" height="500"/> 
+<img src="./images/emptyValue.png" widht="500" height="500"/> 
 
 <hr>
 
 <p>In the dropdown menu we have some currency options</p>
 
-<img src="./images/" width="500" height="500"/>
+<img src="./images/currenciesOptions.png" width="500" height="500"/>
 
 <hr>
 
 <p>Adding and converting currency values</p>
 
-<img src="./images/" width="500" height="500"/>
+<img src="./images/convertingValue.png" width="500" height="500"/>
 
 <hr>
 
 <p>We have a light mode and a dark mode, to change just click on the top center icon</p>
 
-<img src="./images/" width="500" height="500"/>
+<img src="./images/darkMode.png" width="500" height="500"/>
 
 <hr>
 
 <p>On mobile screens</p>
 
-<img src="./images/mobileDarkMode.png"/>      <img src="./images/mobileLightMode.png"/>
+<img src="./images/mobileDarkMode.png" width="437"/>      <img src="./images/mobileLightMode.png" width="437"/>
 
 ## Technologies
 
