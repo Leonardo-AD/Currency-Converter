@@ -20,25 +20,25 @@
 
 <p>In the dropdown menu we have some currency options</p>
 
-<img src="./images/currenciesOptions.png" width="450"/>
+<img src="./images/currenciesOptions.png" width="500"/>
 
 <hr>
 
 <p>Adding and converting currency values</p>
 
-<img src="./images/convertingValue.png" width="450"/>
+<img src="./images/convertingValue.png" width="500"/>
 
 <hr>
 
 <p>We have a light mode and a dark mode, to change just click on the top center icon</p>
 
-<img src="./images/darkMode.png" width="450"/>
+<img src="./images/darkMode.png" width="500"/>
 
 <hr>
 
 <p>On mobile screens</p>
 
-<img src="./images/mobileDarkMode.png" width="380"/>      <img src="./images/mobileLightMode.png" width="390"/>
+<img src="./images/mobileDarkMode.png" width="370"/>      <img src="./images/mobileLightMode.png" width="370"/>
 
 ## Technologies
 
