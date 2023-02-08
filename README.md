@@ -32,13 +32,13 @@
 
 <p>We have a light mode and a dark mode, to change just click on the top center icon</p>
 
-<img src="./images/darkMode.png" width="500" height="500"/>
+<img src="./images/darkMode.png" width="600" height="500"/>
 
 <hr>
 
 <p>On mobile screens</p>
 
-<img src="./images/mobileDarkMode.png" width="437"/>      <img src="./images/mobileLightMode.png" width="437"/>
+<img src="./images/mobileDarkMode.png" width="420"/>      <img src="./images/mobileLightMode.png" width="437"/>
 
 ## Technologies
 
