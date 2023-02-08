@@ -14,19 +14,19 @@
 
 <p>When trying to convert without a value, an alert from the SweetAlert2 API appears</p>
 
-<img src="./images/emptyValue.png" widht="500" height="500"/> 
+<img src="./images/emptyValue.png"/> 
 
 <hr>
 
 <p>In the dropdown menu we have some currency options</p>
 
-<img src="./images/currenciesOptions.png" width="500" height="500"/>
+<img src="./images/currenciesOptions.png"/>
 
 <hr>
 
 <p>Adding and converting currency values</p>
 
-<img src="./images/convertingValue.png" width="500" height="500"/>
+<img src="./images/convertingValue.png"/>
 
 <hr>
 
